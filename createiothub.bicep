@@ -71,7 +71,7 @@ resource IoTHub 'Microsoft.Devices/IotHubs@2021-07-02' = {
         {
           name: 'LucariStorageRoute'
           source: 'DeviceMessages'
-          condition: 'level="storage"'
+          condition: 'true'
           endpointNames: [
             storageEndpoint
           ]
