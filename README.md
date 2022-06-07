@@ -15,6 +15,9 @@ Need to create a Function App to grab the data and store it into a Azure table:
     
 Notes from 'https://codez.deedx.cz/posts/from-iot-hub-to-powerbi/' to use an App rather than Azure Stream. Need also to create a route to the default stream. If we are doing this, then we don't need the Blob storage !!!
   
+* [createiothub.bicep](createiothub.bicep) - Bicep file to create the IoT Hub, Routes, Endpoints and Storage.
 
-  
+* [iotstreamapp.csx](iotstreamapp.csx) - .Net Function App that takes the feed from the IoT hub and stores it in Table storage for consumption by Power BI
+    
+
 
