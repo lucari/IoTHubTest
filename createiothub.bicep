@@ -39,6 +39,15 @@ resource container 'Microsoft.Storage/storageAccounts/blobServices/containers@20
   ]
 }
 
+resource outputTable 'Microsoft.Storage/storageAccounts/tableServices/tables@2021-09-01' = {
+  name: 'outputTable'
+  properties: {}
+  dependsOn: [
+    storageAccount
+  ]
+}
+
+
 resource IoTHub 'Microsoft.Devices/IotHubs@2021-07-02' = {
   name: iotHubName
   location: location
