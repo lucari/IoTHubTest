@@ -1,0 +1,28 @@
+Create a function App. 
+  Current resource group, 
+  New Function App name,
+  Publish as 'Code',
+  Runtime stack is .NET
+  Version 6
+  Region is same as resource group
+  OS is Windows
+  Plan Type Consumption
+
+  Storage Account is existing
+
+  Don't enable Application Insights (does this hang ?)
+
+Under Functions, create a new function. Use template 'IoT Hub (Event Hub)'
+  create a name for the function
+  Event hub connection, New and select IoT hub and endpoint
+
+Select new function and Integration. Add Output
+  Binding is Azure Table Storage
+  Storage account connection is AzureWebJobsStorage
+  Table parameter name is outputTable
+  Table name is outTable (need to create this)
+
+Under Code and test, paste in iotstreamapp.csx
+
+
+
