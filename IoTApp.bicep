@@ -53,7 +53,7 @@ resource container 'Microsoft.Storage/storageAccounts/blobServices/containers@20
 }
 
 resource outputTable 'Microsoft.Storage/storageAccounts/tableServices/tables@2021-09-01' = {
-  name: storageTableName
+  name: '${storageAccountName}/default/${storageTableName}'
   properties: {}
   dependsOn: [
     storageAccount
